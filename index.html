@@ -2,8 +2,10 @@
 <html>
 
 <!--Muss mit LiveServer geoeffnet werden-->
-<!--Hinweis: Der Preset-Marker Hiro (https://stemkoski.github.io/AR-Examples/markers/hiro.png) wird benoetigt-->
+<!--Hinweis: Die Preset-Marker Hiro (https://stemkoski.github.io/AR-Examples/markers/hiro.png) und Kanji (https://stemkoski.github.io/AR-Examples/markers/kanji.png) werden benoetigt-->
 <!--Modell:https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Fox, © 2014, tomkranis. CC BY 4.0 International, © 2017, @AsoboStudio and @scurest. CC BY 4.0 International-->
+<!--Modell: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/DiffuseTransmissionPlant, © 2024, Darmstadt Graphics Group GmbH.-->
+
 <head>
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.7/aframe/build/aframe-ar.js"></script>
@@ -12,7 +14,7 @@
 
 <body style='margin: 0px; overflow: scroll;'>
 
-  <a-scene embedded arjs>
+  <a-scene embedded arjs='sourceType: webcam;'>
       <a-marker preset="hiro">
           <a-entity
               gltf-model=url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Fox/glTF-Binary/Fox.glb) 
@@ -22,6 +24,17 @@
               animation-mixer>
           </a-entity>
       </a-marker>
+
+      <a-marker preset="kanji">
+          <a-entity
+              gltf-model=url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/DiffuseTransmissionPlant/glTF-Binary/DiffuseTransmissionPlant.glb) 
+              position="0 0 0"
+              rotation="0 0 0"
+              scale="2 2 2"
+              animation-mixer>
+          </a-entity>
+      </a-marker>
+
 
       <a-entity camera></a-entity>
   </a-scene>
