@@ -14,7 +14,8 @@
 
 <body style='margin: 0px; overflow: scroll;'>
 
-  <a-scene embedded arjs='sourceType: webcam;'>
+  <a-scene embedded arjs='sourceType: webcam;' vr-mode-ui="enabled: false">
+        <a-camera position="0 0 0" look-controls="enabled: false"> </a-camera>
       <a-marker preset="hiro">
           <a-entity
               gltf-model=url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Fox/glTF-Binary/Fox.glb) 
@@ -34,9 +35,6 @@
               animation-mixer>
           </a-entity>
       </a-marker>
-
-
-      <a-entity camera></a-entity>
   </a-scene>
 </body>
 </html>
