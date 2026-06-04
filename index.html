@@ -7,15 +7,18 @@
 <!--Modell: https://sketchfab.com/3d-models/tree-c25e5fc2bfa54d24a165a8a207c0a6d7, Epic_Tree_Store, CC BY 4.0 International-->
 
 <head>
+  <!--A-Frame-->
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.7/aframe/build/aframe-ar.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+  
+  <!--AR.js-->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.7/aframe/build/aframe-ar.js"></script>
 </head>
 
-<body style='margin: 0px; overflow: scroll;'>
-
+<body style='margin: 0; overflow: scroll;'>
   <a-scene embedded arjs='sourceType: webcam;' xr-mode-ui="enabled: false">
-        <a-camera position="0 0 0" look-controls="enabled: false"> </a-camera>
+    
+    <!--Marker-->
       <a-marker preset="hiro">
           <a-entity
               gltf-model=url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Fox/glTF-Binary/Fox.glb) 
@@ -26,6 +29,7 @@
           </a-entity>
       </a-marker>
 
+    <!--Marker-->
       <a-marker preset="kanji">
           <a-entity
               gltf-model=url(tree.glb) 
@@ -35,6 +39,10 @@
               animation-mixer>
           </a-entity>
       </a-marker>
+    
+    <!--Kamera-->
+      <a-entity camera></a-entity>
+    
   </a-scene>
 </body>
 </html>
