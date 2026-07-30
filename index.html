@@ -2,8 +2,8 @@
 <html>
 
 <!--Hinweis: Die Preset-Marker Hiro (https://stemkoski.github.io/AR-Examples/markers/hiro.png) und Kanji (https://stemkoski.github.io/AR-Examples/markers/kanji.png) werden benoetigt-->
-<!--Modell:https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Fox, © 2014, tomkranis. CC BY 4.0 International, © 2017, @AsoboStudio and @scurest. CC BY 4.0 International-->
-<!--Modell: https://sketchfab.com/3d-models/tree-c25e5fc2bfa54d24a165a8a207c0a6d7, Epic_Tree_Store, CC BY 4.0 International-->
+<!--Modell 1:https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Fox, © 2014, tomkranis. CC BY 4.0 International, © 2017, @AsoboStudio and @scurest. CC BY 4.0 International-->
+<!--Modell 2: https://sketchfab.com/3d-models/tree-c25e5fc2bfa54d24a165a8a207c0a6d7, Epic_Tree_Store, CC BY 4.0 International-->
 
 <head>
   <!--A-Frame-->
@@ -17,7 +17,7 @@
 <body style='margin: 0; overflow: scroll;'>
   <a-scene embedded arjs='sourceType: webcam;' xr-mode-ui="enabled: false">
     
-    <!--Marker-->
+    <!--Marker Hiro mit Modell 1-->
       <a-marker preset="hiro">
           <a-entity
               gltf-model=url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Fox/glTF-Binary/Fox.glb) 
@@ -28,10 +28,10 @@
           </a-entity>
       </a-marker>
 
-    <!--Marker-->
+    <!--Marker Kanji mit Modell 2-->
       <a-marker preset="kanji">
           <a-entity
-              gltf-model=url(tree.glb) 
+              gltf-model=url(tree.glb)
               position="5 0 -2.5"
               rotation="0 -90 90"
               scale="0.8 0.8 0.8 "
